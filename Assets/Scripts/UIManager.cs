@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Threading.Tasks;
 using Unity.Netcode;
 using UnityEngine.UI;
 
@@ -54,7 +55,9 @@ public class UIManager : MonoBehaviour
         // relay features - if the Unity transport is found and is relay protocol then we redirect all the 
         // traffic through the relay, else it just uses a LAN type (UNET) communication.
         if (RelayManager.Instance.IsRelayEnabled)
-            await RelayManager.Instance.SetupRelay();
+        {
+            var relay = SetupRelay();
+        }
 
         if (NetworkManager.Singleton.StartHost())
             Debug.Log("Host started...");
@@ -65,11 +68,47 @@ public class UIManager : MonoBehaviour
     public void StartClient()
     {
         if (RelayManager.Instance.IsRelayEnabled && !string.IsNullOrEmpty(joinCodeInput.text))
-            await RelayManager.Instance.JoinRelay(joinCodeInput.text);
+        {
+            var join = JoinRelay();
+        }
 
         if (NetworkManager.Singleton.StartClient())
             Debug.Log("Client started...");
         else
             Debug.Log("Unable to start client...");
+    }
+    public void StatusLabels()
+    {
+        var mode = NetworkManager.Singleton.IsHost ?
+            "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
+
+        GUILayout.Label("Transport: " +
+            NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
+        GUILayout.Label("Mode: " + mode);
+    }
+
+    // Async helpers
+
+    public async Task SetupRelay()
+    {
+        try
+        {
+            await RelayManager.Instance.SetupRelay();
+        }
+        catch
+        {
+            Debug.LogWarning("Failed to setup relay");
+        }
+    }
+
+    public async Task JoinRelay() {
+        try
+        {
+            await RelayManager.Instance.JoinRelay(joinCodeInput.text);
+        }
+        catch
+        {
+            Debug.Log("Failed to join relay with input code " + joinCodeInput.text);
+        }
     }
 }
