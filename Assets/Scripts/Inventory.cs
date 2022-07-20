@@ -15,4 +15,9 @@ public class Inventory : MonoBehaviour
     {
         
     }
+
+    public void Add(Item item)
+    {
+
+    }
 }
