@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5190887297108029851}
   - component: {fileID: 5190887297107063643}
   - component: {fileID: -3884154007160134227}
-  - component: {fileID: -6147946402867089040}
+  - component: {fileID: 2626999981041281976}
   m_Layer: 0
   m_Name: Cherry
   m_TagString: Untagged
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.13993348
   m_Center: {x: 0, y: 0.12715182, z: 0.0000000037252903}
---- !u!114 &-6147946402867089040
+--- !u!114 &2626999981041281976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5190887297104866715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d636ddb892f243d0be3b149b010c6cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 733f051716701f7438f459d7e11ee3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 50
+  item: Cherry
+  type: Fruit
+  quantity: 1
+  icon: {fileID: 0}
+  stackable: 1
+  metaData: 

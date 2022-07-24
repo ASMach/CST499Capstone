@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7688651250997208412}
   - component: {fileID: 7688651250998208412}
   - component: {fileID: 8345348971042681946}
-  - component: {fileID: -877354070482427022}
+  - component: {fileID: 2534273878457217336}
   m_Layer: 0
   m_Name: Hotdog
   m_TagString: Untagged
@@ -100,7 +100,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25234362
   m_Center: {x: 0, y: 0.073231064, z: -0.000000007450581}
---- !u!114 &-877354070482427022
+--- !u!114 &2534273878457217336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7688651251000473948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d636ddb892f243d0be3b149b010c6cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 733f051716701f7438f459d7e11ee3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 50
+  item: Hotdog
+  type: Meal
+  quantity: 1
+  icon: {fileID: 0}
+  stackable: 1
+  metaData: 

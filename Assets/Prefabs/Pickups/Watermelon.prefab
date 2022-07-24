@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3930785271848631587}
   - component: {fileID: 3930785271847501795}
   - component: {fileID: 5420776212192108310}
-  - component: {fileID: 4805682182479798258}
+  - component: {fileID: -6801302747137279187}
   m_Layer: 0
   m_Name: Watermelon
   m_TagString: Untagged
@@ -102,7 +102,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.34535435
   m_Center: {x: 0.0000013411045, y: 0.14771205, z: -0.000000007450581}
---- !u!114 &4805682182479798258
+--- !u!114 &-6801302747137279187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3930785271849427235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d636ddb892f243d0be3b149b010c6cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 733f051716701f7438f459d7e11ee3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 50
+  item: Watermelon
+  type: Fruit
+  quantity: 1
+  icon: {fileID: 0}
+  stackable: 1
+  metaData: 
