@@ -7,7 +7,6 @@ public class QuantumInventory : MonoBehaviour
 {
     [System.NonSerialized] public List<Slot> inventory, hotbar, slots;
     public int maxSlots;
-    public KeyCode interact, action;
     public AudioClip open, close, pickUp, moveSlot, drop;
     public float distance;
 
@@ -79,29 +78,25 @@ public class QuantumInventory : MonoBehaviour
         t[1].gameObject.SetActive(false);
     }
 
-    private void Update()
+    public void InteractInput()
     {
-        if (Input.GetKeyDown(interact))
+        RaycastHit hit;
+        int layer = gameObject.layer;
+        gameObject.layer = 2;
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance))
         {
-            RaycastHit hit;
-            int layer = gameObject.layer;
-            gameObject.layer = 2;
-            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance))
-            {
-                if (hit.collider.GetComponent<QuantumItem>() != null)
-                    Gather(hit.collider.GetComponent<QuantumItem>());
-                else if (hit.collider.GetComponent<QuantumContainer>() != null)
-                    Container(hit.collider.GetComponent<QuantumContainer>());
-            }
-            gameObject.layer = layer;
+            if (hit.collider.GetComponent<QuantumItem>() != null)
+                Gather(hit.collider.GetComponent<QuantumItem>());
+            else if (hit.collider.GetComponent<QuantumContainer>() != null)
+                Container(hit.collider.GetComponent<QuantumContainer>());
         }
-
-        if (Input.GetKeyDown(action))
-        {
-            Freeze();
-            ActionInventory();
-            SetActive(false, true, false);
-        }
+        gameObject.layer = layer;
+    }
+    public void ActionInput()
+    {
+        Freeze();
+        ActionInventory();
+        SetActive(false, true, false);
     }
 
     public void Freeze()
