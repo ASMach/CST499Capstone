@@ -64,6 +64,8 @@ public class QuantumInventory : MonoBehaviour
         go[2] = Resources.Load<GameObject>("Core/QIS/_hotbar");
         go[3] = Resources.Load<GameObject>("Core/QIS/_erit");
         error = Resources.Load<Sprite>("Core/QIS/_ertex");
+        Debug.Log(canvas);
+        Debug.Log(go[1]);
         t[1] = Instantiate<GameObject>(go[1], canvas).transform;
         invSlots = t[1].Find("_slots");
         t[0] = t[1].Find("_container");
