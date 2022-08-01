@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 838914587497576441}
   - component: {fileID: -8674710831076496533}
   - component: {fileID: 430282966141885614}
+  - component: {fileID: 8679376485417227621}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -407,11 +408,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSlots: 0
-  interact: 0
-  action: 0
   open: {fileID: 0}
   close: {fileID: 0}
   pickUp: {fileID: 0}
   moveSlot: {fileID: 0}
   drop: {fileID: 0}
   distance: 0
+--- !u!114 &8679376485417227621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23699f0af8714c2dbf39189db7ea7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

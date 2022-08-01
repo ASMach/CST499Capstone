@@ -94,7 +94,7 @@ public class QuantumInventory : MonoBehaviour
         }
         gameObject.layer = layer;
     }
-    public void ActionInput()
+    public void InventoryInput()
     {
         Freeze();
         ActionInventory();

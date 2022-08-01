@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
 	void Start () 
     {
 	}
+
+    void OnTalk()
+    {
+        FluentManager.Instance.ExecuteClosestAction(gameObject);
+    }
 	
 	void Update () 
     {
