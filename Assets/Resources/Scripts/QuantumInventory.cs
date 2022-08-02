@@ -80,8 +80,9 @@ public class QuantumInventory : MonoBehaviour
         t[1].gameObject.SetActive(false);
     }
 
-    public void InteractInput()
+    public void OnInteract()
     {
+        Debug.Log("Interact");
         RaycastHit hit;
         int layer = gameObject.layer;
         gameObject.layer = 2;
@@ -94,7 +95,8 @@ public class QuantumInventory : MonoBehaviour
         }
         gameObject.layer = layer;
     }
-    public void InventoryInput()
+
+    public void OnInventory()
     {
         Freeze();
         ActionInventory();
