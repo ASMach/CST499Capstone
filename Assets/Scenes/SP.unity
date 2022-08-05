@@ -2053,6 +2053,25 @@ MonoBehaviour:
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1 &736555900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 696902ad3fd03f74e9fdfc518dfed926,
+    type: 3}
+  m_PrefabInstance: {fileID: 670366694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &736555902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736555900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0493c01436614881b29996fe7792c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC14: {fileID: 0}
 --- !u!1 &754489789
 GameObject:
   m_ObjectHideFlags: 0
