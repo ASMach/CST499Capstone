@@ -19,6 +19,7 @@ public class PickupGun : MonoBehaviour
         Shoot shoot = other.gameObject.GetComponent<Shoot>();
         if (shoot != null)
         {
+            Debug.Log("Shoot component found");
             shoot.Gun = gun;
             Destroy(gameObject);
         }
