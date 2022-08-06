@@ -17,7 +17,8 @@ public class Shoot : MonoBehaviour
         {
             if (value != null)
             {
-                gun = Instantiate(value, new Vector3(0.0f, 0.0f, 10.0f), this.transform.rotation);
+                gun = Instantiate(value, this.gameObject.transform.position + new Vector3(0.0f, 1.0f, 10.0f), this.gameObject.transform.rotation);
+                gun.transform.parent = this.gameObject.transform;
             }
         }
     }
