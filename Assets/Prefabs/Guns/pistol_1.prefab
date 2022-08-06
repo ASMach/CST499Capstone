@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b228fe7daaa84462a8c0e4afec23b49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryRound: {fileID: 0}
-  secondaryRound: {fileID: 0}
+  primaryRound: {fileID: 5481131208548253871, guid: 5e2a1164dc632754fb8914ce621c95c7,
+    type: 3}
+  secondaryRound: {fileID: 100000, guid: c5e333f528c016846878d8a5c199bd00, type: 3}
   primaryAmmo: 10
   secondaryAmmo: 0
   primaryFirePoint: {x: 0, y: 0, z: 0}
