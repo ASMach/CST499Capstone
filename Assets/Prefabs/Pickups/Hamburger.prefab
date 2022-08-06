@@ -118,6 +118,6 @@ MonoBehaviour:
   item: Hamburger
   type: Meal
   quantity: 1
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 7707449bf9a42422c8e2db2fe17c8efc, type: 3}
   stackable: 1
   metaData: 

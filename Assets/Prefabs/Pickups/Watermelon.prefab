@@ -117,6 +117,6 @@ MonoBehaviour:
   item: Watermelon
   type: Fruit
   quantity: 1
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3e2779bb12ffc47e9866d585d92eb2df, type: 3}
   stackable: 1
   metaData: 

@@ -114,6 +114,6 @@ MonoBehaviour:
   item: Cherry
   type: Fruit
   quantity: 1
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 82b997bda1b7c498f828c9750c8349a2, type: 3}
   stackable: 1
   metaData: 
