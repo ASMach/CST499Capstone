@@ -80,6 +80,18 @@ public class QuantumInventory : MonoBehaviour
         t[1].gameObject.SetActive(false);
     }
 
+    void Update ()
+    {
+        RaycastHit hit;
+        Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance);
+        {
+            if (hit.collider.GetComponent<QuantumItem>() != null)
+            {
+                Debug.Log("I see something!");
+            }
+        }
+    }
+
     public void OnInteract()
     {
         Debug.Log("Interact");
@@ -88,10 +100,14 @@ public class QuantumInventory : MonoBehaviour
         gameObject.layer = 2;
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance))
         {
-            if (hit.collider.GetComponent<QuantumItem>() != null)
+            if (hit.collider.GetComponent<QuantumItem>() != null) {
+                Debug.Log("Gathering Something!");
                 Gather(hit.collider.GetComponent<QuantumItem>());
-            else if (hit.collider.GetComponent<QuantumContainer>() != null)
+            }
+            else if (hit.collider.GetComponent<QuantumContainer>() != null) {
+                Debug.Log("It's a Container!");
                 Container(hit.collider.GetComponent<QuantumContainer>());
+            }
         }
         gameObject.layer = layer;
     }

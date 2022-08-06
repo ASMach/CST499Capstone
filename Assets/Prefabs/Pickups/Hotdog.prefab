@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7688651250998208412}
   - component: {fileID: 8345348971042681946}
   - component: {fileID: 2534273878457217336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hotdog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
