@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5190887297107063643}
   - component: {fileID: -3884154007160134227}
   - component: {fileID: 2626999981041281976}
+  - component: {fileID: -3637006511558908167}
   m_Layer: 6
   m_Name: Cherry
   m_TagString: Untagged
@@ -117,3 +118,15 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 82b997bda1b7c498f828c9750c8349a2, type: 3}
   stackable: 1
   metaData: 
+--- !u!114 &-3637006511558908167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5190887297104866715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ce1299798948409a47006ae2033c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

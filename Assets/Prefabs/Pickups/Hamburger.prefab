@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 942139965370907644}
   - component: {fileID: 1418579326858114524}
   - component: {fileID: -7311047610350394632}
+  - component: {fileID: -8082057684820221919}
   m_Layer: 6
   m_Name: Hamburger
   m_TagString: Untagged
@@ -121,3 +122,15 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 7707449bf9a42422c8e2db2fe17c8efc, type: 3}
   stackable: 1
   metaData: 
+--- !u!114 &-8082057684820221919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942139965368902972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745ce1299798948409a47006ae2033c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
