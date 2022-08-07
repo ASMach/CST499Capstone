@@ -1,12 +1,12 @@
 using Fluent;
 
-public class Youko : FluentScript
+public class Emily : FluentScript
 {
     public override void OnStart() { Player.Instance.CanMove = false; }
     public override void OnFinish() { Player.Instance.CanMove = true; }
 
     public override FluentNode Create()
     {
-        return Yell("Hihi! I'm Youko!");
+        return Yell("I'm Emily and I have nothing to add!");
     }
 }
