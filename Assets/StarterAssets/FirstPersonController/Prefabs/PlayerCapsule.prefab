@@ -410,12 +410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSlots: 0
-  open: {fileID: 0}
-  close: {fileID: 0}
-  pickUp: {fileID: 0}
-  moveSlot: {fileID: 0}
-  drop: {fileID: 0}
-  distance: 0
+  open: {fileID: 8300000, guid: 0c4657fca5b2df7468eaeca5d421b20c, type: 3}
+  close: {fileID: 8300000, guid: 0f0c1ffa7e7f9d74fa6c515ee73830be, type: 3}
+  pickUp: {fileID: 8300000, guid: 93e808610112b7a44952c040661ac3f5, type: 3}
+  moveSlot: {fileID: 8300000, guid: 24329f9424654ac4e9d870e3645b3be7, type: 3}
+  drop: {fileID: 8300000, guid: 6d90e8f5fb9e57c40a3ddb7a1eb39dbd, type: 3}
+  distance: 2
 --- !u!114 &8679376485417227621
 MonoBehaviour:
   m_ObjectHideFlags: 0
