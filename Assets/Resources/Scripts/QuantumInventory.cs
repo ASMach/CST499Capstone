@@ -36,9 +36,11 @@ public class QuantumInventory : MonoBehaviour
         hotbar = new List<Slot>();
         slots = new List<Slot>();
 
-        foreach (Transform child in transform)
-            if (child.GetComponent<Camera>() != null)
-                playerCamera = child;
+        playerCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+
+        //foreach (Transform child in transform)
+        //    if (child.GetComponent<Camera>() != null)
+        //        playerCamera = child;
 
         foreach (Transform child in transform)
             if (child.GetComponent<PlayerLook>() != null)
