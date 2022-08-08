@@ -85,7 +85,7 @@ public class QuantumInventory : MonoBehaviour
     void Update ()
     {
         RaycastHit hit;
-        Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance);
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, distance))
         {
             if (hit.collider.GetComponent<QuantumItem>() != null)
             {
