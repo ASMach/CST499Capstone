@@ -121,6 +121,14 @@ public class QuantumInventory : MonoBehaviour
         SetActive(false, true, false);
     }
 
+    public void OnDrop(Slot slot) {
+        Drop(slot);
+        quantumContainer.inventory.Remove(slot);
+        PlayFX(drop);
+        RefreshInventory();
+    }
+
+
     public void Freeze()
     {
         o = !o;
@@ -300,14 +308,7 @@ public class QuantumInventory : MonoBehaviour
 
     private void Action(Slot slot)
     {
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Drop(slot);
-            inventory.Remove(slot);
-            PlayFX(moveSlot);
-        }
-        else
-        {
+    
             if (t[0].gameObject.activeSelf)
             {
                 if (quantumContainer.inventory.Count >= quantumContainer.maxSlots)
@@ -340,21 +341,13 @@ public class QuantumInventory : MonoBehaviour
                         break;
                 }
             }
-        }
 
         RefreshInventory();
     }
 
     private void HotbarAction(Slot slot)
     {
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Drop(slot);
-            hotbar.Remove(slot);
-            PlayFX(drop);
-        }
-        else
-        {
+
             if (t[0].gameObject.activeSelf)
             {
                 if (quantumContainer.inventory.Count >= quantumContainer.maxSlots)
@@ -371,27 +364,18 @@ public class QuantumInventory : MonoBehaviour
                 hotbar.Remove(slot);
                 PlayFX(moveSlot);
             }
-        }
 
         RefreshInventory();
     }
 
     private void ContainerAction(Slot slot)
     {
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Drop(slot);
-            quantumContainer.inventory.Remove(slot);
-            PlayFX(drop);
-            RefreshInventory();
-        }
-        else if (!Input.GetKey(KeyCode.LeftControl) && inventory.Count < maxSlots)
-        {
+
             Gather(slot);
             quantumContainer.inventory.Remove(slot);
             PlayFX(moveSlot);
             RefreshInventory();
-        }
+
     }
 
     private void SlotAction(Slot slot)
@@ -399,20 +383,11 @@ public class QuantumInventory : MonoBehaviour
         int i = int.Parse(slot.metaData);
         ChangeMaxSlots(-i);
 
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            Drop(slot);
-            slots.Remove(slot);
-            PlayFX(drop);
-            RefreshInventory();
-        }
-        else if (!Input.GetKey(KeyCode.LeftControl) && inventory.Count < maxSlots)
-        {
+
             Gather(slot);
             slots.Remove(slot);
             PlayFX(moveSlot);
             RefreshInventory();
-        }
     }
 
     private void ChangeMaxSlots(int quantity)
