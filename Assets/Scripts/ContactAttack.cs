@@ -7,7 +7,7 @@ public class ContactAttack : MonoBehaviour
     [SerializeField]
     float damage = 5.0f;
 
-    void OnCollisionEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         HealthStats stats = other.gameObject.GetComponent<HealthStats>();
 
