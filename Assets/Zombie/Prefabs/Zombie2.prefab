@@ -429,6 +429,8 @@ GameObject:
   - component: {fileID: 1768152291786793082}
   - component: {fileID: 4940451040654613647}
   - component: {fileID: -5178129307249803871}
+  - component: {fileID: 5572893185531456969}
+  - component: {fileID: -4310610910011550087}
   m_Layer: 0
   m_Name: Zombie2
   m_TagString: Untagged
@@ -523,6 +525,32 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5572893185531456969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998371697940912222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecae3f1c32d6410db670df82ce00642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &-4310610910011550087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998371697940912222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd31dbecf1a647d3be64c811bb85ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
 --- !u!1 &2057808353243881084
 GameObject:
   m_ObjectHideFlags: 0
