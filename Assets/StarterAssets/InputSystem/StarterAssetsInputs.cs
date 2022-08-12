@@ -65,7 +65,10 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
-		
+
+		public void InteractInput() { }
+
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
